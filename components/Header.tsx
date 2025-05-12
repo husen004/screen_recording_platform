@@ -13,26 +13,38 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
                     )}
 
                     <article>
-                        <p className=''>{subHeader}</p>
-                        <h1 className=''>{title}</h1>
+                        <p>{subHeader}</p>
+                        <h1>{title}</h1>
                     </article>
-
-                    <aside className=''>
-                        <Link href='/upload'>
-                            <Image src='/assets/icons/upload.svg' alt='upload' width={16} height={16} />
-                            <span>
-                                Upload Video
-                            </span>
-                        </Link>
-                        <div className='record'>
-                            <button className='primary-btn'>
-                                <Image src={ICONS.record} alt='record' width={16} height={16} />
-                                <span>Record a Video</span>
-                            </button>
-                        </div>
-                    </aside>
                 </div>
 
+                <aside className=''>
+                    <Link href='/upload'>
+                        <Image src='/assets/icons/upload.svg' alt='upload' width={16} height={16} />
+                        <span>
+                            Upload Video
+                        </span>
+                    </Link>
+                    <div className='record'>
+                        <button className='primary-btn'>
+                            <Image src={ICONS.record} alt='record' width={16} height={16} />
+                            <span>Record a Video</span>
+                        </button>
+                    </div>
+                </aside>
+
+            </section>
+
+            <section className='search-filter'>
+                <div className='search'>
+                    <input 
+                    type='text'
+                    placeholder='Search for videos, users, or topics'
+                    />
+                    <Image src="/assets/icons/search.svg" alt='search' width={16} height={16} />
+                </div>
+
+                {`<DropDownList />`}
             </section>
         </header>
     )
