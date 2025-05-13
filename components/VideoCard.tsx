@@ -21,16 +21,16 @@ const VideoCard = ({
       <article>
         <div>
           <figure>
-            <Image src={userImg} alt='userImg' width={34} height={34} className='rounded-full aspect-square' />
+            <Image src={userImg || "/aasets/images/jason.png"} alt='userImg' width={34} height={34} className='rounded-full aspect-square' />
             <figcaption>
               <h3>{username}</h3>
               <p>{visibility}</p>
             </figcaption>
           </figure>
-            <aside className=''>
-              <Image src='/assets/icons/eye.svg' alt='eye' width={16} height={16} />
-              <span>{views}</span>
-            </aside>
+          <aside className=''>
+            <Image src='/assets/icons/eye.svg' alt='eye' width={16} height={16} />
+            <span>{views}</span>
+          </aside>
         </div>
         <h2>
           {title} - {" "} {createdAt.toLocaleDateString("en-US", {
@@ -39,8 +39,8 @@ const VideoCard = ({
             day: "numeric"
           })}
         </h2>
-        <button onClick={() => {}} className='copy-btn'>
-          <Image src={'/assets/icons/link.svg'} alt='link' width={18} height={18}/>
+        <button onClick={() => { }} className='copy-btn'>
+          <Image src={'/assets/icons/link.svg'} alt='link' width={18} height={18} />
         </button>
         {duration && (
           <div className='duration'>
