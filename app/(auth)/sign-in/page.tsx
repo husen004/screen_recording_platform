@@ -39,7 +39,7 @@ const page = () => {
 
       </div>
 
-        <p>© SnapTech {new Date().getFullYear()}</p>
+      <p>© SnapTech {new Date().getFullYear()}</p>
 
       </aside>
 
@@ -62,5 +62,6 @@ const page = () => {
     </main>
   )
 }
+
 
 export default page
